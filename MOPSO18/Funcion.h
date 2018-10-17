@@ -15,19 +15,22 @@ using namespace std;
 class MOPSO;
 class Funcion
 {
-  public:
+public:
 	Funcion();
 	Funcion(int tipo);
 	virtual ~Funcion();
 	vector<float> calcularCosto(vector<float> posicion);
 	int getSizeObj();
+	int getSizeVar();
 	float getMaxVar(int obj);
 	float getMinVar(int obj);
 	float getMaxVel(int obj);
 	float getMinVel(int obj);
-  private:
+
+private:
 	int tipo_funcion;
 	int numVar;
+	int numObj;
 	vector<float> Min_var;
 	vector<float> Max_var;
 	vector<float> Min_vel;
